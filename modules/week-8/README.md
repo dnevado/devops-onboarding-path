@@ -1,6 +1,14 @@
 # Week 8 — End-to-end Integration Exercise
 
-Overview
+![CI](https://img.shields.io/badge/CI-ready-blue) ![Grader](https://img.shields.io/badge/Grader-ready-brightgreen)
+
+![Onboarding icon](../../assets/icons/ci.svg)
+
+- **Estimated:** 6–10 hours
+- **Points:** 20
+- **Difficulty:** Advanced
+
+## Overview
 
 Combine previous weeks into an integrated pipeline: build a container, deploy to a staging target (can be mocked), and demonstrate observability basics.
 

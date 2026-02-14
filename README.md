@@ -1,6 +1,10 @@
 # DevOps Onboarding: 8-Week Hybrid Learning Path
 
-This repository contains a complete 8-week DevOps onboarding learning path designed for junior engineers with no prior DevOps experience. The program is hybrid: rich theory in Markdown plus hands-on exercises that are validated via GitHub Actions.
+![CI](https://img.shields.io/badge/CI-ready-blue) ![Grader](https://img.shields.io/badge/Grader-ready-brightgreen)
+
+This repository contains a complete 8-week DevOps onboarding learning path designed for junior engineers with no prior DevOps experience. The program is hybrid: rich theory in Markdown plus hands-on exercises validated by GitHub Actions.
+
+![Onboarding icon](assets/icons/ci.svg)
 
 Structure overview
 - `modules/week-1` … `modules/week-8`: each week contains `README.md` (theory + exercises) and `exercise.json` (expected deliverables).
@@ -21,4 +25,4 @@ Customization
 - Update `modules/*/exercise.json` to change deliverables and points.
 - Update workflows to enforce additional policies (e.g., terraform fmt, linter checks).
 
-See `WEEKLY_PLAN.md` for a high-level schedule and module objectives.
+See `WEEKLY_PLAN.md` for a high-level schedule and module objectives. For visual standards, see `STYLE_GUIDE.md`.

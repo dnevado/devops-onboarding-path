@@ -1,6 +1,14 @@
- # Week 4 — CI/CD & GitHub Actions
+# Week 4 — CI/CD & GitHub Actions
 
-Overview
+![CI](https://img.shields.io/badge/CI-ready-blue) ![Grader](https://img.shields.io/badge/Grader-ready-brightgreen)
+
+![CI icon](../../assets/icons/ci.svg)
+
+- **Estimated:** 5–8 hours
+- **Points:** 12
+- **Difficulty:** Intermediate
+
+## Overview
 
 This week teaches how to automate build, test, and delivery workflows using GitHub Actions. Learners will author workflows, use reusable calls, understand secrets, and learn common debugging techniques.
 

@@ -1,6 +1,14 @@
- # Week 2 — Linux & Networking Basics
+# Week 2 — Linux & Networking Basics
 
-Overview
+![CI](https://img.shields.io/badge/CI-ready-blue) ![Grader](https://img.shields.io/badge/Grader-ready-brightgreen)
+
+![Shell icon](../../assets/icons/git.svg)
+
+- **Estimated:** 3–5 hours
+- **Points:** 10
+- **Difficulty:** Beginner
+
+## Overview
 
 This week teaches the shell and network fundamentals every DevOps engineer needs. The materials include practical command examples, diagnostic patterns, and a hands-on script exercise you can run locally.
 

@@ -1,6 +1,14 @@
 # Week 5 — Infrastructure as Code (Terraform)
 
-Overview
+![CI](https://img.shields.io/badge/CI-ready-blue) ![Grader](https://img.shields.io/badge/Grader-ready-brightgreen)
+
+![Terraform icon](../../assets/icons/terraform.svg)
+
+- **Estimated:** 5–8 hours
+- **Points:** 12
+- **Difficulty:** Intermediate
+
+## Overview
 
 An introduction to Terraform, state, providers, and modules. Learners will author a minimal module and run `terraform plan`.
 

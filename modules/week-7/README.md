@@ -1,7 +1,15 @@
 
 # Week 7 — Security Basics & Secrets Management
 
-Overview
+![CI](https://img.shields.io/badge/CI-ready-blue) ![Grader](https://img.shields.io/badge/Grader-ready-brightgreen)
+
+![Security icon](../../assets/icons/git.svg)
+
+- **Estimated:** 3–5 hours
+- **Points:** 10
+- **Difficulty:** Intermediate
+
+## Overview
 
 Security is a cross-cutting concern for all DevOps activity. This week covers fundamental practices around secrets management, least privilege, and pipeline hygiene.
 

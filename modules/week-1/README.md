@@ -1,6 +1,14 @@
 # Week 1 — Foundations: Git & GitHub
 
-Overview
+![CI](https://img.shields.io/badge/CI-ready-blue) ![Grader](https://img.shields.io/badge/Grader-ready-brightgreen)
+
+![Git icon](../../assets/icons/git.svg)
+
+- **Estimated:** 3–5 hours
+- **Points:** 10
+- **Difficulty:** Beginner
+
+## Overview
 
 This week establishes the source-control foundation used across the onboarding path. Learners gain practical fluency with Git, GitHub collaboration patterns (fork/branch/PR), and the Git-based triggers that run automated checks.
 

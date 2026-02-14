@@ -1,7 +1,15 @@
 
 # Week 6 — Observability & Logging
 
-Overview
+![CI](https://img.shields.io/badge/CI-ready-blue) ![Grader](https://img.shields.io/badge/Grader-ready-brightgreen)
+
+![Observability icon](../../assets/icons/observability.svg)
+
+- **Estimated:** 4–6 hours
+- **Points:** 10
+- **Difficulty:** Intermediate
+
+## Overview
 
 Observability helps you understand system behaviour in production via logs, metrics, and traces. This week focuses on practical instrumentation patterns and how to expose, collect, and query telemetry.
 

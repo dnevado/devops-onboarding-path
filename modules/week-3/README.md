@@ -1,6 +1,14 @@
- # Week 3 — Containerization with Docker
+# Week 3 — Containerization with Docker
 
-Overview
+![CI](https://img.shields.io/badge/CI-ready-blue) ![Grader](https://img.shields.io/badge/Grader-ready-brightgreen)
+
+![Docker icon](../../assets/icons/docker.svg)
+
+- **Estimated:** 5–8 hours
+- **Points:** 12
+- **Difficulty:** Intermediate
+
+## Overview
 
 Containers package an application and its dependencies into a reproducible runtime image. This week focuses on building lightweight images, understanding layering, and producing multi-stage builds for small final artifacts.
 
