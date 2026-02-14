@@ -1,0 +1,68 @@
+name: Grade PRs
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  grade:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - name: Determine module
+        id: module
+        run: |
+          # Expect PR title like: "module:week-1 - implement X"
+          title=$(jq -r .pull_request.title "$GITHUB_EVENT_PATH")
+          echo "title=$title"
+          module=$(echo "$title" | grep -oE 'module:[[:space:]]*week-[0-9]+' | sed 's/module:[[:space:]]*//') || true
+          if [ -z "$module" ]; then
+            echo "Could not auto-detect module from title. Looking in body..."
+            body=$(jq -r .pull_request.body "$GITHUB_EVENT_PATH")
+            module=$(echo "$body" | grep -oE 'module:[[:space:]]*week-[0-9]+' | sed 's/module:[[:space:]]*//') || true
+          fi
+          if [ -z "$module" ]; then
+            echo "module=unknown" >> $GITHUB_OUTPUT
+          else
+            echo "module=$module" >> $GITHUB_OUTPUT
+          fi
+      - name: Run grader
+        if: steps.module.outputs.module != 'unknown'
+        run: |
+          module=${{ steps.module.outputs.module }}
+          echo "Running grader for $module"
+          python3 scripts/grader.py --module "$module"
+      - name: Post neutral comment if module unknown
+        if: steps.module.outputs.module == 'unknown'
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.payload.pull_request.number,
+              body: 'Could not detect module. Please include `module:week-N` in the PR title or body.'
+            })
+      - name: On success: comment pass
+        if: success() && steps.module.outputs.module != 'unknown'
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.payload.pull_request.number,
+              body: 'Grader: ✅ Module passed. Points awarded according to module rules.'
+            })
+      - name: On failure: comment fail
+        if: failure() && steps.module.outputs.module != 'unknown'
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.payload.pull_request.number,
+              body: 'Grader: ❌ Module checks failed. See workflow logs for details.'
+            })

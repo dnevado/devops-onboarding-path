@@ -1,0 +1,5 @@
+{
+  "expected_files": ["app/Dockerfile", "deliverables/week-3-<yourname>.md"],
+  "points": 12,
+  "pass_threshold": 0.75
+}

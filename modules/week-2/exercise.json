@@ -1,0 +1,5 @@
+{
+  "expected_files": ["deliverables/week-2-<yourname>.sh", "report/week-2-<yourname>.md"],
+  "points": 10,
+  "pass_threshold": 0.7
+}

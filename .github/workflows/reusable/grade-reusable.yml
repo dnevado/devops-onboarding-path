@@ -1,0 +1,21 @@
+name: Reusable: Grade Module
+
+on:
+  workflow_call:
+    inputs:
+      module:
+        required: true
+        type: string
+
+jobs:
+  grade:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - name: Run grader
+        run: |
+          python3 scripts/grader.py --module ${{ inputs.module }}

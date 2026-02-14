@@ -1,0 +1,15 @@
+name: Org-level call to reusable grader
+
+on:
+  workflow_dispatch:
+    inputs:
+      module:
+        description: 'week to grade, e.g. week-1'
+        required: true
+
+jobs:
+  call-reusable:
+    uses: ./.github/workflows/reusable/grade-reusable.yml
+    with:
+      module: ${{ github.event.inputs.module }}
+    secrets: inherit

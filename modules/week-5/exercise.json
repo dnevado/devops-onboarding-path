@@ -1,0 +1,5 @@
+{
+  "expected_files": ["terraform/main.tf", "deliverables/week-5-<yourname>.md"],
+  "points": 12,
+  "pass_threshold": 0.75
+}
