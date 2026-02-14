@@ -51,4 +51,3 @@ This calendar-style plan provides a glanceable, visual schedule for the 8-week D
 - Use badges for live status and add them to module README headers for instant feedback.
 - Encourage learners to include a small emoji or icon in their `deliverables` file to increase engagement.
 
-If you'd like, I can now (A) insert the header template into `WEEKLY_PLAN.md` with icons per-week (done), (B) convert this calendar to a printable PDF, or (C) auto-populate the date ranges based on a chosen cohort start date. Which next? 
